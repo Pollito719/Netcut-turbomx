@@ -14,7 +14,8 @@ import {
   Server,
   Activity,
   Cpu,
-  Info
+  Info,
+  Scale
 } from 'lucide-react';
 
 const APP_ICON = "https://www.dropbox.com/scl/fi/h8fxjyge9nqnle2jbnj7s/turbo.png?rlkey=nnhw7iy2blbssn7wyxasrvp7t&st=7njbu0cq&raw=1";
@@ -126,7 +127,7 @@ const App: React.FC = () => {
                 Velocidad <span className="text-sky-500 underline decoration-sky-500/30">Turbo</span> Sin Límites
               </h1>
               <p className="text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                Desbloquea el potencial real de tu conexión con protocolos optimizados para la infraestructura moderna de hosting Tier-1.
+                Desbloquea el potencial real de tu conexión con protocolos optimizados para la infraestructura moderna de hosting Tier-1 en servidores dedicados.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
@@ -164,10 +165,10 @@ const App: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FeatureCard icon={<Zap size={28} />} title="Baja Latencia" desc="Optimizado para servidores de alto rendimiento en Europa y América, garantizando un ping mínimo." />
-            <FeatureCard icon={<Lock size={28} />} title="Cifrado Militar" desc="Protección de datos mediante túneles SSH de alta seguridad que mantienen tu identidad anónima." />
-            <FeatureCard icon={<Globe size={28} />} title="Global Reach" desc="Infraestructura compatible con los mejores proveedores de hosting para una estabilidad del 99.9%." />
-            <FeatureCard icon={<Activity size={28} />} title="Ancho de Banda" desc="Sin límites de datos. Navega, haz streaming o juega con la máxima capacidad de tu proveedor." />
+            <FeatureCard icon={<Zap size={28} />} title="Baja Latencia" desc="Optimizado para servidores de alto rendimiento con peering directo en Europa y América, garantizando un ping mínimo." />
+            <FeatureCard icon={<Lock size={28} />} title="Cifrado Militar" desc="Protección de datos mediante túneles SSH de alta seguridad que mantienen tu identidad y tráfico totalmente anónimos." />
+            <FeatureCard icon={<Globe size={28} />} title="Global Reach" desc="Infraestructura alojada en proveedores Tier-1 (como Netcup) para una estabilidad del 99.9% asegurada." />
+            <FeatureCard icon={<Activity size={28} />} title="Ancho de Banda" desc="Sin límites de datos. Navega, haz streaming o juega con la máxima capacidad de tu conexión actual." />
           </div>
         </div>
       </section>
@@ -185,14 +186,14 @@ const App: React.FC = () => {
                     <div className="bg-sky-500/10 p-3 rounded-xl text-sky-400 h-fit"><Server /></div>
                     <div>
                       <h4 className="font-bold text-xl mb-1">Servidores Netcup & Pro-Hosting</h4>
-                      <p className="text-slate-400">Nuestra red corre en centros de datos con certificación ISO, garantizando máxima redundancia y velocidad punta mediante proveedores líderes.</p>
+                      <p className="text-slate-400">Nuestra red corre en centros de datos con certificación ISO, garantizando máxima redundancia y velocidad punta mediante infraestructura alemana de clase mundial.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <div className="bg-sky-500/10 p-3 rounded-xl text-sky-400 h-fit"><Cpu /></div>
                     <div>
                       <h4 className="font-bold text-xl mb-1">Hardware de Última Generación</h4>
-                      <p className="text-slate-400">Procesadores Xeon/EPYC y almacenamiento NVMe para gestionar miles de conexiones simultáneas sin latencia perceptible.</p>
+                      <p className="text-slate-400">Procesadores AMD EPYC™ y almacenamiento NVMe para gestionar miles de túneles simultáneos sin degradación de rendimiento.</p>
                     </div>
                   </div>
                 </div>
@@ -200,15 +201,15 @@ const App: React.FC = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/5 p-8 rounded-3xl border border-white/5 text-center">
                   <span className="block text-4xl font-black text-sky-500 mb-2">10Gbps</span>
-                  <span className="text-slate-400 font-bold uppercase text-xs tracking-widest">Puerto de Red</span>
+                  <span className="text-slate-400 font-bold uppercase text-xs tracking-widest">Conexión de Red</span>
                 </div>
                 <div className="bg-white/5 p-8 rounded-3xl border border-white/5 text-center">
                   <span className="block text-4xl font-black text-sky-500 mb-2">99.9%</span>
-                  <span className="text-slate-400 font-bold uppercase text-xs tracking-widest">Uptime Real</span>
+                  <span className="text-slate-400 font-bold uppercase text-xs tracking-widest">Uptime Mensual</span>
                 </div>
                 <div className="bg-white/5 p-8 rounded-3xl border border-white/5 text-center col-span-2">
                   <span className="block text-4xl font-black text-sky-500 mb-2">Protección DDoS</span>
-                  <span className="text-slate-400 font-bold uppercase text-xs tracking-widest">Capa 7 Activada</span>
+                  <span className="text-slate-400 font-bold uppercase text-xs tracking-widest">Mitigación Multi-Capa</span>
                 </div>
               </div>
             </div>
@@ -260,18 +261,32 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Legal Notice Section (Netcup Compliance) */}
+      {/* Legal & Imprint Section (Netcup / EU Compliance) */}
       <section id="legal" className="py-24 scroll-mt-20 border-t border-white/5 bg-slate-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold flex items-center justify-center gap-2">
-              <Info className="text-sky-500" />
-              Información Legal
-            </h2>
-          </div>
-          <div className="text-slate-400 text-sm leading-relaxed space-y-4 text-center">
-            <p>Este sitio web es operado por TurboMX. La infraestructura del servicio VPN se distribuye a través de nodos globales de alta disponibilidad.</p>
-            <p>Al utilizar este sitio, aceptas nuestra política de cookies y privacidad conforme a los estándares internacionales de protección de datos.</p>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Scale className="text-sky-500" />
+                Aviso Legal / Impressum
+              </h2>
+              <div className="text-slate-400 text-sm leading-relaxed space-y-4">
+                <p><strong>Operador:</strong> TurboMX Development Team</p>
+                <p><strong>Contacto:</strong> Soporte vía Telegram @internetGratisMexico</p>
+                <p><strong>Propósito:</strong> Plataforma de servicios de red virtual privada y herramientas de seguridad para dispositivos móviles.</p>
+                <p>La infraestructura técnica es gestionada en nodos de alta disponibilidad para garantizar la continuidad del servicio.</p>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Info className="text-sky-500" />
+                GDPR / RGPD
+              </h2>
+              <div className="text-slate-400 text-sm leading-relaxed space-y-4">
+                <p>Cumplimos con los estándares internacionales de protección de datos. No se almacenan registros de IP ni históricos de navegación de los usuarios.</p>
+                <p>Para consultas sobre sus datos o solicitudes de privacidad, por favor contacte a través de nuestros canales oficiales.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -285,19 +300,19 @@ const App: React.FC = () => {
                 <img src={APP_ICON} alt="TurboMX" className="w-10 h-10 rounded-xl" />
                 <span className="font-black text-2xl bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-blue-600">TurboMX VPN</span>
               </div>
-              <p className="text-slate-500 font-medium">Potencia, Privacidad y Libertad Digital para México.</p>
+              <p className="text-slate-500 font-medium">Potencia, Privacidad y Libertad Digital desde México para el mundo.</p>
             </div>
             
             <div className="flex justify-center gap-10">
-              <a href={TELEGRAM_URL} target="_blank" className="text-slate-400 hover:text-sky-400 transition-all transform hover:scale-125"><MessageCircle size={32} /></a>
-              <a href={YOUTUBE_URL} target="_blank" className="text-slate-400 hover:text-red-500 transition-all transform hover:scale-125"><Youtube size={32} /></a>
-              <a href={PLAY_STORE_URL} target="_blank" className="text-slate-400 hover:text-green-500 transition-all transform hover:scale-125"><Play size={32} /></a>
+              <a href={TELEGRAM_URL} target="_blank" className="text-slate-400 hover:text-sky-400 transition-all transform hover:scale-125" title="Telegram"><MessageCircle size={32} /></a>
+              <a href={YOUTUBE_URL} target="_blank" className="text-slate-400 hover:text-red-500 transition-all transform hover:scale-125" title="YouTube"><Youtube size={32} /></a>
+              <a href={PLAY_STORE_URL} target="_blank" className="text-slate-400 hover:text-green-500 transition-all transform hover:scale-125" title="Play Store"><Play size={32} /></a>
             </div>
 
             <div className="text-center md:text-right">
-              <p className="text-slate-500 text-sm font-bold mb-2 uppercase tracking-widest">Hosting en Netcup Pro</p>
-              <p className="text-slate-600 text-sm">
-                &copy; {new Date().getFullYear()} TurboMX. <br/>All systems operational.
+              <p className="text-slate-500 text-xs font-bold mb-2 uppercase tracking-widest">Alojamiento Profesional en Netcup GmbH</p>
+              <p className="text-slate-600 text-xs">
+                &copy; {new Date().getFullYear()} TurboMX VPN. <br/>Diseñado para alto rendimiento y seguridad extrema.
               </p>
             </div>
           </div>
